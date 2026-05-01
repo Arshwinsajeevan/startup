@@ -5,11 +5,13 @@ import { useRef } from "react";
 
 const demos = [
   {
-    title: "Arjun & Priya's Wedding",
+    title: "Rahul & Anjali's Wedding",
     type: "Wedding",
-    date: "March 2025",
+    date: "June 2026",
+    url: "https://wedding-card-demo.vercel.app/",
+    iframeUrl: "https://wedding-card-demo.vercel.app/",
     description:
-      "A royal-themed wedding website with floral motifs, countdown timer, and an elegant photo gallery.",
+      "A stunning traditional Kerala wedding website with beautiful scroll animations, real-time RSVP, and event mapping.",
     gradient: "from-peach-300 via-rose-300 to-peach-400",
     accentBg: "bg-peach-50",
     accentText: "text-peach-500",
@@ -54,9 +56,9 @@ const demos = [
   },
 ];
 
-function PhoneMockup({ colors }) {
+function PhoneMockup({ colors, iframeUrl }) {
   return (
-    <div className="phone-mockup mx-auto transform group-hover:scale-105 transition-transform duration-500">
+    <div className="phone-mockup mx-auto transform group-hover:scale-105 transition-transform duration-500 overflow-hidden relative">
       {/* Status Bar */}
       <div className="flex items-center justify-between px-5 pt-8 pb-2">
         <span className="text-[10px] font-medium text-slate-400">9:41</span>
@@ -66,28 +68,48 @@ function PhoneMockup({ colors }) {
           <div className="w-4 h-2 rounded-sm bg-slate-300" />
         </div>
       </div>
-      {/* Header */}
-      <div className={`mx-3 h-20 rounded-xl ${colors.header} mb-2 flex items-end p-3`}>
-        <div className="space-y-1">
-          <div className="w-16 h-1.5 bg-white/60 rounded-full" />
-          <div className="w-24 h-2 bg-white/80 rounded-full" />
+
+      {iframeUrl ? (
+        <div className="absolute inset-0 top-[32px] bottom-[16px] left-[0] right-[0] overflow-hidden bg-white pointer-events-none flex justify-center">
+          <iframe
+            src={iframeUrl}
+            className="border-0 origin-top"
+            style={{ 
+              transform: "scale(0.597)", 
+              width: "375px", 
+              height: "720px",
+              minWidth: "375px" 
+            }}
+            title="Preview"
+          />
         </div>
-      </div>
-      {/* Content */}
-      <div className="px-3 space-y-2">
-        <div className={`h-8 rounded-lg ${colors.card1}`} />
-        <div className="flex gap-2">
-          <div className={`h-16 flex-1 rounded-lg ${colors.card2}`} />
-          <div className={`h-16 flex-1 rounded-lg ${colors.card1}`} />
-        </div>
-        <div className={`h-6 rounded-lg ${colors.card2}`} />
-        <div className="flex gap-2">
-          <div className={`h-10 flex-1 rounded-lg ${colors.card1}`} />
-          <div className={`h-10 flex-1 rounded-lg ${colors.card2}`} />
-          <div className={`h-10 flex-1 rounded-lg ${colors.card1}`} />
-        </div>
-        <div className={`h-8 rounded-full ${colors.accent} mx-6`} />
-      </div>
+      ) : (
+        <>
+          {/* Header */}
+          <div className={`mx-3 h-20 rounded-xl ${colors.header} mb-2 flex items-end p-3`}>
+            <div className="space-y-1">
+              <div className="w-16 h-1.5 bg-white/60 rounded-full" />
+              <div className="w-24 h-2 bg-white/80 rounded-full" />
+            </div>
+          </div>
+          {/* Content */}
+          <div className="px-3 space-y-2">
+            <div className={`h-8 rounded-lg ${colors.card1}`} />
+            <div className="flex gap-2">
+              <div className={`h-16 flex-1 rounded-lg ${colors.card2}`} />
+              <div className={`h-16 flex-1 rounded-lg ${colors.card1}`} />
+            </div>
+            <div className={`h-6 rounded-lg ${colors.card2}`} />
+            <div className="flex gap-2">
+              <div className={`h-10 flex-1 rounded-lg ${colors.card1}`} />
+              <div className={`h-10 flex-1 rounded-lg ${colors.card2}`} />
+              <div className={`h-10 flex-1 rounded-lg ${colors.card1}`} />
+            </div>
+            <div className={`h-8 rounded-full ${colors.accent} mx-6`} />
+          </div>
+        </>
+      )}
+
       {/* Bottom Bar */}
       <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-24 h-1 rounded-full bg-slate-200" />
     </div>
@@ -105,12 +127,13 @@ function DemoCard({ demo, index }) {
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.15 }}
       className="group cursor-pointer"
+      onClick={() => demo.url && window.open(demo.url, "_blank")}
     >
       <div className="relative bg-white rounded-3xl border border-slate-100 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-peach-100/40 transition-all duration-500 hover:-translate-y-3">
         {/* Phone Preview */}
         <div className={`relative bg-gradient-to-br ${demo.gradient} p-8 pb-4 flex items-center justify-center`}>
           <div className="absolute inset-0 bg-white/10" />
-          <PhoneMockup colors={demo.previewColors} />
+          <PhoneMockup colors={demo.previewColors} iframeUrl={demo.iframeUrl} />
         </div>
 
         {/* Content */}
