@@ -39,18 +39,6 @@ export default function About() {
               </p>
             </div>
 
-            <div className="mt-8 pt-8 border-t border-slate-100 flex flex-wrap items-center gap-8">
-              {[
-                { value: "100+", label: "Events Created" },
-                { value: "50+", label: "Happy Families" },
-                { value: "4.9★", label: "Avg Rating" },
-              ].map((s) => (
-                <div key={s.label}>
-                  <div className="text-2xl font-bold bg-gradient-to-r from-peach-400 to-rose-400 bg-clip-text text-transparent">{s.value}</div>
-                  <div className="text-xs text-slate-400 font-medium uppercase tracking-wider mt-1">{s.label}</div>
-                </div>
-              ))}
-            </div>
           </motion.div>
         </div>
       </div>

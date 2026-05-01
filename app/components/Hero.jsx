@@ -150,7 +150,6 @@ export default function Hero() {
           className="mt-14 flex flex-wrap items-center justify-center gap-6 sm:gap-8 text-sm text-slate-400"
         >
           {[
-            { icon: "🎉", text: "100+ Events Created" },
             { icon: "📱", text: "Mobile-First Design" },
             { icon: "⚡", text: "Ready in 24 Hours" },
           ].map((item) => (

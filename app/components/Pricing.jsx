@@ -6,7 +6,7 @@ import { useRef, useState } from "react";
 const plans = [
   {
     name: "Basic",
-    price: "₹1,999",
+    price: "₹999",
     period: "one-time",
     description: "Perfect for small gatherings and intimate celebrations",
     features: ["Single page event website", "Mobile responsive", "Shareable link", "Event details & schedule", "Up to 10 photos", "7 days live"],
@@ -15,7 +15,7 @@ const plans = [
   },
   {
     name: "Standard",
-    price: "₹4,999",
+    price: "₹1,999",
     period: "one-time",
     description: "Ideal for weddings and large celebrations",
     features: ["Multi-section website", "Photo & video gallery", "Google Maps integration", "WhatsApp share button", "Up to 50 photos", "RSVP feature", "30 days live", "Custom domain support"],
@@ -24,7 +24,7 @@ const plans = [
   },
   {
     name: "Premium",
-    price: "₹9,999",
+    price: "₹5,999",
     period: "one-time",
     description: "The ultimate event experience for those who want it all",
     features: ["Everything in Standard", "Unlimited photos & videos", "Custom animations", "Guest book / wishes wall", "Live event updates", "Memory archive (forever)", "Priority support", "Multiple event pages"],
