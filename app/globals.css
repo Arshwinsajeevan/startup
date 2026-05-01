@@ -1,26 +1,158 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: #ffffff;
+  --color-foreground: #1a1a2e;
+  --color-peach-50: #fff8f5;
+  --color-peach-100: #ffe8dd;
+  --color-peach-200: #ffd1bb;
+  --color-peach-300: #ffb899;
+  --color-peach-400: #ff9f77;
+  --color-peach-500: #ff8655;
+  --color-gold-50: #fffdf5;
+  --color-gold-100: #fff8e1;
+  --color-gold-200: #ffecb3;
+  --color-gold-300: #ffe082;
+  --color-gold-400: #ffd54f;
+  --color-gold-500: #ffca28;
+  --color-rose-50: #fff5f7;
+  --color-rose-100: #ffe0e6;
+  --color-rose-200: #ffc2cc;
+  --color-rose-300: #ffa3b3;
+  --color-rose-400: #ff8599;
+  --color-rose-500: #ff6680;
+  --color-lavender-50: #f8f5ff;
+  --color-lavender-100: #ede5ff;
+  --color-lavender-200: #d9ccff;
+  --color-lavender-300: #c4b2ff;
+  --color-lavender-400: #b099ff;
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --font-sans: var(--font-outfit);
+  --font-display: var(--font-playfair);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Hero animated gradient blobs */
+@keyframes blob-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(30px, -50px) scale(1.1); }
+  50% { transform: translate(-20px, 20px) scale(0.95); }
+  75% { transform: translate(40px, 30px) scale(1.05); }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  animation: blob-float 8s ease-in-out infinite;
+}
+
+.blob-1 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, var(--color-peach-200), var(--color-rose-200));
+  top: -100px;
+  right: -100px;
+  animation-delay: 0s;
+}
+
+.blob-2 {
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(135deg, var(--color-gold-200), var(--color-peach-300));
+  bottom: -80px;
+  left: -80px;
+  animation-delay: -3s;
+}
+
+.blob-3 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, var(--color-lavender-200), var(--color-rose-100));
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: -5s;
+}
+
+/* Pricing card gradient borders */
+.pricing-card-popular {
+  position: relative;
+  background: linear-gradient(135deg, var(--color-peach-400), var(--color-rose-400), var(--color-gold-400));
+  padding: 2px;
+  border-radius: 1.5rem;
+}
+
+.pricing-card-popular-inner {
+  background: white;
+  border-radius: calc(1.5rem - 2px);
+  height: 100%;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-slate-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--color-peach-300), var(--color-rose-300));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, var(--color-peach-400), var(--color-rose-400));
+}
+
+/* Phone mockup */
+.phone-mockup {
+  position: relative;
+  width: 240px;
+  height: 480px;
+  border-radius: 36px;
+  border: 8px solid #1a1a2e;
+  background: white;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+.phone-mockup::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 24px;
+  background: #1a1a2e;
+  border-radius: 0 0 16px 16px;
+  z-index: 10;
 }
