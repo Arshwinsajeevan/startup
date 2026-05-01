@@ -6,31 +6,40 @@ import { useRef, useState } from "react";
 const plans = [
   {
     name: "Basic",
-    price: "₹999",
-    period: "one-time",
-    description: "Perfect for small gatherings and intimate celebrations",
-    features: ["Single page event website", "Mobile responsive", "Shareable link", "Event details & schedule", "Up to 10 photos", "7 days live"],
+    price: "Custom",
+    period: "Quote",
+    description: "Simple digital invite",
+    features: [
+      "1-page event website",
+      "Couple / person details",
+      "Event date, time, location",
+      "Google Maps integration",
+      "Shareable link",
+      "Mobile responsive design",
+      "Basic design template"
+    ],
     gradient: "from-slate-600 to-slate-700",
     popular: false,
   },
   {
     name: "Standard",
-    price: "₹1,999",
-    period: "one-time",
-    description: "Ideal for weddings and large celebrations",
-    features: ["Multi-section website", "Photo & video gallery", "Google Maps integration", "WhatsApp share button", "Up to 50 photos", "RSVP feature", "30 days live", "Custom domain support"],
+    price: "Custom",
+    period: "Quote",
+    description: "Complete digital experience",
+    features: [
+      "Everything in Basic +",
+      "Photo gallery",
+      "Multiple sections (story, timeline, etc.)",
+      "Smooth animations & transitions",
+      "Shareable links",
+      "Map integration",
+      "Custom theme selection",
+      "Priority delivery",
+      "Minor customization support"
+    ],
     gradient: "from-peach-400 to-rose-400",
     popular: true,
-  },
-  {
-    name: "Premium",
-    price: "₹5,999",
-    period: "one-time",
-    description: "The ultimate event experience for those who want it all",
-    features: ["Everything in Standard", "Unlimited photos & videos", "Custom animations", "Guest book / wishes wall", "Live event updates", "Memory archive (forever)", "Priority support", "Multiple event pages"],
-    gradient: "from-slate-800 to-slate-900",
-    popular: false,
-  },
+  }
 ];
 
 function PricingCard({ plan, index }) {
@@ -103,9 +112,9 @@ export default function Pricing() {
             <br />
             <span className="bg-gradient-to-r from-peach-400 to-rose-400 bg-clip-text text-transparent">Pricing</span>
           </h2>
-          <p className="mt-4 text-slate-500 max-w-xl mx-auto">No hidden fees. No subscriptions. Just one-time pricing for your perfect event website.</p>
+          <p className="mt-4 text-slate-500 max-w-xl mx-auto">Custom experiences crafted for your unique celebration. Contact us to find the perfect fit.</p>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12 max-w-4xl mx-auto items-stretch">
           {plans.map((p, i) => (
             <PricingCard key={p.name} plan={p} index={i} />
           ))}
