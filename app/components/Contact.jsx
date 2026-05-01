@@ -9,13 +9,50 @@ export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [form, setForm] = useState({ name: "", phone: "", eventType: "" });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
-    setForm({ name: "", phone: "", eventType: "" });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/arshwin619@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: form.name,
+          phone: form.phone,
+          eventType: form.eventType,
+          _subject: `New Event Website Inquiry from ${form.name} (${form.eventType})`,
+          _captcha: "false"
+        })
+      });
+
+      if (response.ok) {
+        // Create WhatsApp Message
+        const whatsappNumber = "917593071195";
+        const message = `Hi Occasioo team! 👋\n\nI'm interested in an event website. Here are my details:\n\n*Name:* ${form.name}\n*Phone:* ${form.phone}\n*Event Type:* ${form.eventType}\n\nPlease get back to me!`;
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+        // Open WhatsApp in new tab
+        window.open(whatsappUrl, "_blank");
+
+        setSubmitted(true);
+        setTimeout(() => setSubmitted(false), 5000);
+        setForm({ name: "", phone: "", eventType: "" });
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -99,11 +136,18 @@ export default function Contact() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-peach-400 to-rose-400 hover:from-peach-500 hover:to-rose-500 transition-all duration-300 shadow-lg shadow-peach-200/50 hover:shadow-peach-300/70 hover:scale-[1.02] active:scale-[0.98] text-lg"
+                  disabled={isSubmitting}
+                  className={`w-full py-4 rounded-xl font-semibold text-white transition-all duration-300 shadow-lg text-lg ${isSubmitting
+                      ? "bg-slate-400 cursor-not-allowed"
+                      : "bg-gradient-to-r from-peach-400 to-rose-400 hover:from-peach-500 hover:to-rose-500 shadow-peach-200/50 hover:shadow-peach-300/70 hover:scale-[1.02] active:scale-[0.98]"
+                    }`}
                 >
-                  Get Your Event Website →
+                  {isSubmitting ? "Sending..." : "Get Your Event Website →"}
                 </button>
-                <p className="text-center text-xs text-slate-400">We&apos;ll never share your details. Expect a response within 24 hours.</p>
+                <p className="text-center text-xs text-slate-400">
+                  We&apos;ll never share your details. Expect a response within 24 hours.
+                  <br />
+                </p>
               </form>
             )}
           </motion.div>

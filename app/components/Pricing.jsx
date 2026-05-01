@@ -66,11 +66,10 @@ function PricingCard({ plan, index }) {
       </ul>
       <a
         href="#contact"
-        className={`block text-center py-3.5 rounded-xl font-semibold transition-all duration-300 ${
-          plan.popular
+        className={`block text-center py-3.5 rounded-xl font-semibold transition-all duration-300 ${plan.popular
             ? "text-white bg-gradient-to-r from-peach-400 to-rose-400 hover:from-peach-500 hover:to-rose-500 shadow-lg shadow-peach-200/50 hover:shadow-peach-300/70 hover:scale-105"
             : "text-slate-700 bg-slate-100 hover:bg-slate-200"
-        }`}
+          }`}
       >
         Get Started
       </a>

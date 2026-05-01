@@ -79,10 +79,10 @@ export default function Footer() {
           {/* Contact & Social */}
           <div>
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Connect</h4>
-            <div className="space-y-3 mb-6">
-              <p className="text-sm text-slate-400">arshwin619@mail.com</p>
-              <p className="text-sm text-slate-400">+91 75930 71195</p>
-              <p className="text-sm text-slate-400">+91 99466 64218</p>
+            <div className="space-y-3 mb-6 flex flex-col items-start">
+              <a href="mailto:arshwin619@gmail.com" className="text-sm text-slate-400 hover:text-peach-400 transition-colors">arshwin619@gmail.com</a>
+              <a href="tel:+917593071195" className="text-sm text-slate-400 hover:text-peach-400 transition-colors">+91 75930 71195</a>
+              <a href="tel:+919946664218" className="text-sm text-slate-400 hover:text-peach-400 transition-colors">+91 99466 64218</a>
             </div>
             <div className="flex items-center gap-3">
               {socialLinks.map((s) => (

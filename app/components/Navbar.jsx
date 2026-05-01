@@ -34,11 +34,10 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? "bg-white/80 backdrop-blur-xl shadow-lg shadow-peach-100/50"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
@@ -89,19 +88,16 @@ export default function Navbar() {
           >
             <div className="w-6 h-5 relative flex flex-col justify-between">
               <span
-                className={`w-full h-0.5 bg-slate-700 rounded-full transition-all duration-300 origin-center ${
-                  isOpen ? "rotate-45 translate-y-[9px]" : ""
-                }`}
+                className={`w-full h-0.5 bg-slate-700 rounded-full transition-all duration-300 origin-center ${isOpen ? "rotate-45 translate-y-[9px]" : ""
+                  }`}
               />
               <span
-                className={`w-full h-0.5 bg-slate-700 rounded-full transition-all duration-300 ${
-                  isOpen ? "opacity-0 scale-0" : ""
-                }`}
+                className={`w-full h-0.5 bg-slate-700 rounded-full transition-all duration-300 ${isOpen ? "opacity-0 scale-0" : ""
+                  }`}
               />
               <span
-                className={`w-full h-0.5 bg-slate-700 rounded-full transition-all duration-300 origin-center ${
-                  isOpen ? "-rotate-45 -translate-y-[9px]" : ""
-                }`}
+                className={`w-full h-0.5 bg-slate-700 rounded-full transition-all duration-300 origin-center ${isOpen ? "-rotate-45 -translate-y-[9px]" : ""
+                  }`}
               />
             </div>
           </button>
