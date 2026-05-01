@@ -17,19 +17,21 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
+      const formData = new URLSearchParams();
+      formData.append("name", form.name);
+      formData.append("phone", form.phone);
+      formData.append("eventType", form.eventType);
+      formData.append("_subject", `New Event Website Inquiry from ${form.name} (${form.eventType})`);
+      formData.append("_captcha", "false");
+      formData.append("_template", "table");
+
       const response = await fetch("https://formsubmit.co/ajax/arshwin619@gmail.com", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
           "Accept": "application/json"
         },
-        body: JSON.stringify({
-          name: form.name,
-          phone: form.phone,
-          eventType: form.eventType,
-          _subject: `New Event Website Inquiry from ${form.name} (${form.eventType})`,
-          _captcha: "false"
-        })
+        body: formData.toString()
       });
 
       if (response.ok) {
@@ -38,8 +40,8 @@ export default function Contact() {
         const message = `Hi Occasioo team! 👋\n\nI'm interested in an event website. Here are my details:\n\n*Name:* ${form.name}\n*Phone:* ${form.phone}\n*Event Type:* ${form.eventType}\n\nPlease get back to me!`;
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-        // Open WhatsApp in new tab
-        window.open(whatsappUrl, "_blank");
+        // Redirect current tab to WhatsApp (bypasses mobile popup blockers)
+        window.location.href = whatsappUrl;
 
         setSubmitted(true);
         setTimeout(() => setSubmitted(false), 5000);
