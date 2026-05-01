@@ -80,8 +80,9 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Connect</h4>
             <div className="space-y-3 mb-6">
-              <p className="text-sm text-slate-400">hello@occasioo.com</p>
-              <p className="text-sm text-slate-400">+91 98765 43210</p>
+              <p className="text-sm text-slate-400">arshwin619@mail.com</p>
+              <p className="text-sm text-slate-400">+91 75930 71195</p>
+              <p className="text-sm text-slate-400">+91 99466 64218</p>
             </div>
             <div className="flex items-center gap-3">
               {socialLinks.map((s) => (
@@ -102,9 +103,6 @@ export default function Footer() {
         <div className="border-t border-slate-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-slate-500">
             © {new Date().getFullYear()} Occasioo. All rights reserved.
-          </p>
-          <p className="text-xs text-slate-500">
-            Made with <span className="text-rose-400">♥</span> in India
           </p>
         </div>
       </div>
