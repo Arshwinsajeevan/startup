@@ -59,10 +59,10 @@ export default function Navbar() {
           {/* Logo */}
           <a href="#home" onClick={(e) => handleLinkClick(e, "#home")} className="flex items-center gap-2 group">
             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-peach-400 to-rose-400 flex items-center justify-center shadow-lg shadow-peach-200/50 group-hover:shadow-peach-300/70 transition-shadow duration-300">
-              <span className="text-white font-bold text-lg">O</span>
+              <span className="text-white font-bold text-lg">I</span>
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-peach-500 via-rose-400 to-gold-500 bg-clip-text text-transparent">
-              Occasioo
+              InviteUs
             </span>
           </a>
 

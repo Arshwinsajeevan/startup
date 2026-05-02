@@ -73,11 +73,11 @@ export default function WhyChooseUs() {
     <section className="py-20 sm:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div ref={ref} initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }} className="text-center mb-14 sm:mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-lavender-50 text-lavender-400 text-sm font-semibold mb-4">Why Occasioo</span>
+          <span className="inline-block px-4 py-1.5 rounded-full bg-lavender-50 text-lavender-400 text-sm font-semibold mb-4">Why InviteUs</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800" style={{ fontFamily: "var(--font-playfair)" }}>
             Why Families & Couples
             <br />
-            <span className="bg-gradient-to-r from-lavender-300 to-rose-400 bg-clip-text text-transparent">Choose Occasioo</span>
+            <span className="bg-gradient-to-r from-lavender-300 to-rose-400 bg-clip-text text-transparent">Choose InviteUs</span>
           </h2>
         </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">

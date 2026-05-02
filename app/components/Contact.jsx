@@ -25,7 +25,7 @@ export default function Contact() {
       formData.append("_captcha", "false");
       formData.append("_template", "table");
 
-      const response = await fetch("https://formsubmit.co/ajax/arshwin619@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/inviteus2026@gmail.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
@@ -37,7 +37,7 @@ export default function Contact() {
       if (response.ok) {
         // Create WhatsApp Message
         const whatsappNumber = "917593071195";
-        const message = `Hi Occasioo team! 👋\n\nI'm interested in an event website. Here are my details:\n\n*Name:* ${form.name}\n*Phone:* ${form.phone}\n*Event Type:* ${form.eventType}\n\nPlease get back to me!`;
+        const message = `Hi InviteUs team! 👋\n\nI'm interested in an event website. Here are my details:\n\n*Name:* ${form.name}\n*Phone:* ${form.phone}\n*Event Type:* ${form.eventType}\n\nPlease get back to me!`;
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
         // Redirect current tab to WhatsApp (bypasses mobile popup blockers)

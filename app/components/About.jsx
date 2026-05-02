@@ -29,13 +29,13 @@ export default function About() {
             <div className="absolute top-6 left-8 text-6xl text-peach-100 font-serif leading-none">&ldquo;</div>
             <div className="relative z-10 space-y-5 text-slate-600 leading-relaxed">
               <p className="text-lg">
-                <span className="font-semibold text-slate-800">Occasioo</span> was born from a simple observation — traditional invitation cards end up forgotten, and PDF invites feel lifeless. We believed every celebration deserves a digital home as beautiful as the event itself.
+                <span className="font-semibold text-slate-800">InviteUs</span> was born from a simple observation — traditional invitation cards end up forgotten, and PDF invites feel lifeless. We believed every celebration deserves a digital home as beautiful as the event itself.
               </p>
               <p>
-                Founded by two friends who are passionate about design and technology, Occasioo creates interactive, shareable event websites that bring people closer. From intimate birthdays to grand weddings, we turn your vision into a link your guests will love.
+                Founded by friends who are passionate about design and technology, InviteUs creates interactive, shareable event websites that bring people closer. From intimate birthdays to grand weddings, we turn your vision into a link your guests will love.
               </p>
               <p>
-                We&apos;re not just building websites — we&apos;re preserving memories. Every Occasioo website becomes a digital keepsake that you can revisit years later, reliving the joy and warmth of your celebration.
+                We&apos;re not just building websites — we&apos;re preserving memories. Every InviteUs website becomes a digital keepsake that you can revisit years later, reliving the joy and warmth of your celebration.
               </p>
             </div>
 
