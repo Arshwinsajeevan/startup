@@ -32,7 +32,7 @@ export default function About() {
                 <span className="font-semibold text-slate-800">InviteUs</span> was born from a simple observation — traditional invitation cards end up forgotten, and PDF invites feel lifeless. We believed every celebration deserves a digital home as beautiful as the event itself.
               </p>
               <p>
-                Founded by two friends who are passionate about design and technology, InviteUs creates interactive, shareable event websites that bring people closer. From intimate birthdays to grand weddings, we turn your vision into a link your guests will love.
+                Founded by friends who are passionate about design and technology, InviteUs creates interactive, shareable event websites that bring people closer. From intimate birthdays to grand weddings, we turn your vision into a link your guests will love.
               </p>
               <p>
                 We&apos;re not just building websites — we&apos;re preserving memories. Every InviteUs website becomes a digital keepsake that you can revisit years later, reliving the joy and warmth of your celebration.
