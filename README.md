@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# InviteUs – Digital Event & Celebration Invitation Websites
 
-## Getting Started
+> **Live Website:** [https://inviteus.in](https://inviteus.in)  
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌟 What is InviteUs?
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+**InviteUs** is an interactive digital invitation website platform built in Kerala, India. It replaces disposable paper cards and static PDF files with modern, mobile-first invitation websites for:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* 💍 **Weddings & Engagements** (Traditional Hindu, Christian Cathedral, Muslim Nikah, Receptions)
+* 🏡 **Housewarming & Grihapravesham** (Paalukaachalu ceremony & family feasts)
+* 🏢 **Inaugurations & Grand Openings** (Shops, showrooms, offices, clinics)
+* 🎂 **Birthdays & Milestones** (1st Birthdays, 50th/60th Jubilees)
+* 👶 **Baby Showers & Naming Ceremonies**
 
-## Learn More
+Every website is shareable via a single WhatsApp link, complete with **1-tap Google Maps venue navigation**, event schedules, background music, photo galleries, and online RSVP tracking.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Tech Stack
 
-## Deploy on Vercel
+* **Framework:** [Next.js](https://nextjs.org) (v16.2 App Router)
+* **Library:** React 19
+* **Styling:** [Tailwind CSS](https://tailwindcss.com) (v4 with inline theme design tokens)
+* **Typography:** `Playfair Display` (Luxury serif display) + `Outfit` (Modern sans-serif body) via `next/font/google`
+* **Animations:** `framer-motion`
+* **Lead Generation:** WhatsApp API Integration (`wa.me`) + FormSubmit.co background logging
+* **SEO & Metadata:** Native dynamic `sitemap.xml`, `robots.txt`, and JSON-LD structured data (`schema.org/ProfessionalService`, `Organization`, `WebSite`)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📞 Contact & Support
+
+* **Website:** [inviteus.in](https://inviteus.in)
+* **Email:** inviteus2026@gmail.com
+* **Instagram:** [@inviteus.in](https://www.instagram.com/inviteus.in/)

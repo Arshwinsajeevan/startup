@@ -9,12 +9,14 @@
   --color-peach-300: #ffb899;
   --color-peach-400: #ff9f77;
   --color-peach-500: #ff8655;
+  --color-peach-600: #f26835;
   --color-gold-50: #fffdf5;
   --color-gold-100: #fff8e1;
   --color-gold-200: #ffecb3;
   --color-gold-300: #ffe082;
   --color-gold-400: #ffd54f;
   --color-gold-500: #ffca28;
+  --color-gold-600: #e5b217;
   --color-rose-50: #fff5f7;
   --color-rose-100: #ffe0e6;
   --color-rose-200: #ffc2cc;
@@ -51,73 +53,9 @@ body {
   overflow-x: hidden;
 }
 
-/* Hero animated gradient blobs */
-@keyframes blob-float {
-
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-
-  25% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-
-  50% {
-    transform: translate(-20px, 20px) scale(0.95);
-  }
-
-  75% {
-    transform: translate(40px, 30px) scale(1.05);
-  }
-}
-
-@keyframes gradient-shift {
-
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-.blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.5;
-  animation: blob-float 8s ease-in-out infinite;
-}
-
-.blob-1 {
-  width: 400px;
-  height: 400px;
-  background: linear-gradient(135deg, var(--color-peach-200), var(--color-rose-200));
-  top: -100px;
-  right: -100px;
-  animation-delay: 0s;
-}
-
-.blob-2 {
-  width: 350px;
-  height: 350px;
-  background: linear-gradient(135deg, var(--color-gold-200), var(--color-peach-300));
-  bottom: -80px;
-  left: -80px;
-  animation-delay: -3s;
-}
-
-.blob-3 {
-  width: 300px;
-  height: 300px;
-  background: linear-gradient(135deg, var(--color-lavender-200), var(--color-rose-100));
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation-delay: -5s;
+/* Subtle luxury celebration background glow */
+.hero-ambient-glow {
+  background: radial-gradient(circle at 50% 20%, rgba(255, 232, 221, 0.45) 0%, rgba(255, 248, 225, 0.35) 35%, rgba(255, 255, 255, 0) 70%);
 }
 
 /* Pricing card gradient borders */

@@ -14,13 +14,42 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: "InviteUs – Digital Wedding & Event Invitation Websites",
-  description: "Create premium, interactive digital invitation websites for your weddings, birthdays, and special events. Shareable via WhatsApp with maps, RSVP, and more.",
-  keywords: ["digital wedding card", "online invitation website", "whatsapp invitation", "event website keral", "InviteUs"],
-  authors: [{ name: "InviteUs" }],
+  metadataBase: new URL("https://inviteus.in"),
+  title: {
+    default: "InviteUs – Digital Invitation Websites for Weddings, Birthdays & Events in Kerala",
+    template: "%s | InviteUs",
+  },
+  description:
+    "Create premium, interactive digital invitation websites for weddings, birthdays, housewarmings, inaugurations, and celebrations. Share on WhatsApp with Google Maps navigation, RSVP, audio music player, and countdown timer. Plans from ₹1,499.",
+  keywords: [
+    "digital invitation website kerala",
+    "online invitation card kerala",
+    "digital wedding invitation website kerala",
+    "housewarming digital invitation kerala",
+    "inauguration invitation website",
+    "birthday invitation website india",
+    "whatsapp invitation website",
+    "kerala event website maker",
+    "save the date website kerala",
+    "interactive event invitation website",
+    "InviteUs",
+    "inviteus kerala",
+  ],
+  authors: [{ name: "InviteUs", url: "https://inviteus.in" }],
+  creator: "InviteUs",
+  publisher: "InviteUs",
+  alternates: {
+    canonical: "/",
+  },
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
-    title: "InviteUs – Turn Your Special Moments Into Shareable Digital Experiences",
-    description: "Elegant and modern digital invitations for your most memorable days.",
+    title: "InviteUs – Kerala's Premier Digital Invitation Websites",
+    description:
+      "Modern, interactive digital invitation websites for weddings, birthdays, housewarmings, and celebrations. Share via WhatsApp with Google Maps navigation, music, and photo gallery. From ₹1,499.",
     url: "https://inviteus.in",
     siteName: "InviteUs",
     locale: "en_IN",
@@ -28,13 +57,83 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "InviteUs – Digital Event Invitation Websites",
-    description: "Transform your special events into beautiful digital memories.",
+    title: "InviteUs – Digital Invitation Websites for All Celebrations",
+    description:
+      "Ditch paper cards! Send stunning interactive invitation websites on WhatsApp with Google Maps & RSVP.",
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://inviteus.in/#organization",
+      "name": "InviteUs",
+      "url": "https://inviteus.in",
+      "logo": "https://inviteus.in/logo.png",
+      "sameAs": ["https://www.instagram.com/inviteus.in/"],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-75930-71195",
+          "contactType": "customer service",
+          "areaServed": "IN",
+          "availableLanguage": ["en", "ml"]
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://inviteus.in/#website",
+      "url": "https://inviteus.in",
+      "name": "InviteUs",
+      "publisher": { "@id": "https://inviteus.in/#organization" }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://inviteus.in/#service",
+      "name": "InviteUs Digital Invitations",
+      "image": "https://inviteus.in/logo.png",
+      "priceRange": "₹1499 - ₹1999",
+      "telephone": "+91-75930-71195",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Kerala",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "10.8505",
+        "longitude": "76.2711"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "09:00",
+        "closes": "21:00"
+      }
+    }
+  ]
 };
 
 export default function RootLayout({ children }) {
@@ -43,6 +142,12 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${outfit.variable} ${playfair.variable} antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-screen flex flex-col bg-white text-foreground">
         {children}
       </body>

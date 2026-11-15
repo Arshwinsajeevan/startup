@@ -74,14 +74,14 @@ function StepCard({ step, index }) {
       initial={{ opacity: 0, y: 40 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: index * 0.15 }}
-      className="relative group"
+      className="relative group h-full flex flex-col"
     >
       {/* Connector line */}
       {index < steps.length - 1 && (
         <div className="hidden lg:block absolute top-12 left-[calc(100%+0.5rem)] w-[calc(100%-1rem)] h-0.5 bg-gradient-to-r from-peach-200 to-transparent z-0" />
       )}
 
-      <div className="relative bg-white rounded-2xl p-6 sm:p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-peach-100/30 transition-all duration-500 hover:-translate-y-2 group-hover:border-peach-200">
+      <div className="relative bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs hover:shadow-xl hover:shadow-peach-100/30 transition-all duration-300 hover:-translate-y-1 group-hover:border-peach-300 flex-1 flex flex-col justify-start">
         {/* Step Number */}
         <div className="absolute -top-3 -right-2 sm:-right-3">
           <span className="text-5xl sm:text-6xl font-bold text-slate-100 group-hover:text-peach-100 transition-colors duration-300">
@@ -91,7 +91,7 @@ function StepCard({ step, index }) {
 
         {/* Icon */}
         <div
-          className={`w-14 h-14 rounded-2xl ${step.bgLight} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}
+          className={`w-14 h-14 rounded-2xl ${step.bgLight} flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-300`}
         >
           <div className={step.iconColor}>
             {step.icon}
@@ -99,10 +99,10 @@ function StepCard({ step, index }) {
         </div>
 
         {/* Content */}
-        <h3 className="text-lg font-bold text-slate-800 mb-2">
+        <h3 className="text-lg font-bold text-slate-800 mb-2 min-h-[3.25rem] flex items-center">
           {step.title}
         </h3>
-        <p className="text-sm text-slate-500 leading-relaxed">
+        <p className="text-sm text-slate-500 leading-relaxed flex-1">
           {step.description}
         </p>
       </div>
@@ -144,7 +144,7 @@ export default function HowItWorks() {
         </motion.div>
 
         {/* Steps Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-stretch">
           {steps.map((step, i) => (
             <StepCard key={step.number} step={step} index={i} />
           ))}
