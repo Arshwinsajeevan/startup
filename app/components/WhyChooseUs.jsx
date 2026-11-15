@@ -20,7 +20,7 @@ const reasons = [
   {
     title: "Effortless WhatsApp Forwarding",
     description:
-      "Send in 1 second to family groups, cousins, and friends across Kerala and the Gulf with an elegant rich preview card.",
+      "Send in 1 second to family groups, relatives, and friends anywhere in India or abroad with an elegant rich preview card.",
     stat: "1-Click",
     statLabel: "WhatsApp Sharing",
     icon: (

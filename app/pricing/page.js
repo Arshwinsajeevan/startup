@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "Can we add background music to the website?",
-    a: "Yes! In the Standard Plan (₹1,999), you can choose any background music or instrumental song (like traditional Nadaswaram, romantic violin, or your favorite track) with an elegant play/pause button.",
+    a: "Yes! In the Standard Plan (₹1,999), you can choose any background music, instrumental melody, acoustic tune, or favorite song of your choice with an elegant play/pause button.",
   },
   {
     q: "How fast will my website be ready?",
