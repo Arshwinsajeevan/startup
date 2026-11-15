@@ -157,7 +157,7 @@ export default function Pricing() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="pricing" className="py-20 sm:py-28 bg-slate-50/60">
+    <section id="pricing" className="scroll-mt-20 sm:scroll-mt-24 py-20 sm:py-28 bg-slate-50/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div

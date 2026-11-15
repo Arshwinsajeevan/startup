@@ -29,22 +29,58 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Handle incoming hash navigation (e.g. arriving from /pricing to /#features)
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.location.hash) {
+      const hash = window.location.hash;
+      const timer = setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 350);
+      return () => clearTimeout(timer);
+    }
+  }, [pathname]);
+
   const handleLinkClick = (e, href) => {
+    const wasMobileOpen = isOpen;
     setIsOpen(false);
 
     // If it's a hash link on the current home page
     if (href.startsWith("/#") && pathname === "/") {
       e.preventDefault();
-      const targetId = href.replace("/", "");
-      const element = document.querySelector(targetId);
-      if (element) {
-        const offset = 80;
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.scrollY - offset;
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
+      const targetId = href.replace("/", ""); // "#features" or "#showcase"
+
+      if (typeof window !== "undefined" && window.history) {
+        window.history.pushState(null, "", targetId);
+      }
+
+      const performScroll = () => {
+        const element = document.querySelector(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      };
+
+      if (wasMobileOpen) {
+        // Wait for mobile menu collapse and touch end to avoid scroll abort
+        setTimeout(performScroll, 250);
+      } else {
+        performScroll();
+      }
+    } else if (href === "/" && pathname === "/") {
+      e.preventDefault();
+      if (typeof window !== "undefined" && window.history) {
+        window.history.pushState(null, "", "/");
+      }
+      const performScrollTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+      if (wasMobileOpen) {
+        setTimeout(performScrollTop, 250);
+      } else {
+        performScrollTop();
       }
     }
   };
