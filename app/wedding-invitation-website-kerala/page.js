@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 export const metadata = {
   title: "Digital Wedding & Event Invitation Websites in Kerala | InviteUs",
   description:
-    "Create clean, interactive digital invitation websites for weddings, housewarmings, birthdays, and store openings in Kerala & India. 1-tap Google Maps directions, schedule, music, and photo gallery. Plans from ₹1,499.",
+    "Create clean, interactive digital invitation websites for weddings, housewarmings, birthdays, and store openings in Kerala & India. 1-tap Google Maps directions, schedule, music, and photo gallery.",
   keywords: [
     "digital wedding invitation website kerala",
     "online wedding card kerala",
@@ -194,7 +194,7 @@ export default function WeddingsAndEventsPage() {
               </a>
             </div>
             <p className="mt-3 text-xs text-slate-400">
-              Basic Plan ₹1,499 • Standard Plan ₹1,999 • Ready in 24 to 48 Hours
+              Basic Plan • Standard Plan • Ready in 24 to 48 Hours
             </p>
           </div>
 
@@ -305,13 +305,11 @@ export default function WeddingsAndEventsPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md mx-auto mb-8 text-left">
               <div className="bg-white rounded-xl p-5 border border-slate-200">
                 <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Basic</span>
-                <div className="text-2xl font-bold text-slate-900 my-1">₹1,499</div>
-                <p className="text-xs text-slate-500">1-Page site, Google Maps, Event Timings, Countdown, WhatsApp share card.</p>
+                <p className="text-xs text-slate-500 mt-2">1-Page site, Google Maps, Event Timings, Countdown, WhatsApp share card.</p>
               </div>
               <div className="bg-white rounded-xl p-5 border-2 border-peach-400 shadow-xs">
                 <span className="text-xs font-semibold text-peach-600 uppercase tracking-wider">Standard</span>
-                <div className="text-2xl font-bold text-slate-900 my-1">₹1,999</div>
-                <p className="text-xs text-slate-500">Everything in Basic + Photo Gallery, Background Song, RSVP confirmation.</p>
+                <p className="text-xs text-slate-500 mt-2">Everything in Basic + Photo Gallery, Background Song, RSVP confirmation.</p>
               </div>
             </div>
             <a

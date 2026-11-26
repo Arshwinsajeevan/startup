@@ -118,7 +118,7 @@ export default function AboutPage() {
                 <div className="text-3xl mb-3">💎</div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">Affordable Luxury</h3>
                 <p className="text-sm text-slate-600">
-                  Fixed transparent packages at ₹1,499 and ₹1,999. World-class design accessible to every family in Kerala and beyond.
+                  Simple, transparent packages with no hidden fees. World-class design accessible to every family in Kerala and beyond.
                 </p>
               </div>
             </div>

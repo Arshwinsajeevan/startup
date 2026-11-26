@@ -7,7 +7,6 @@ import Link from "next/link";
 const plans = [
   {
     name: "Basic",
-    price: "₹1,499",
     period: "one-time",
     description: "Essential, elegant digital invitation",
     features: [
@@ -19,12 +18,11 @@ const plans = [
       "Mobile & Tablet Responsive",
       "24–48 Hours Fast Turnaround",
     ],
-    whatsappMsg: "Hi InviteUs! I'd like to book the Basic Plan (₹1,499).",
+    whatsappMsg: "Hi InviteUs! I'd like to book the Basic Plan.",
     popular: false,
   },
   {
     name: "Standard",
-    price: "₹1,999",
     period: "one-time",
     description: "Complete celebration & memory experience",
     features: [
@@ -36,7 +34,7 @@ const plans = [
       "Custom Theme (Traditional / Modern)",
       "Priority 24-Hour Express Delivery",
     ],
-    whatsappMsg: "Hi InviteUs! I'd like to book the Standard Plan (₹1,999) with music and gallery.",
+    whatsappMsg: "Hi InviteUs! I'd like to book the Standard Plan with music and gallery.",
     popular: true,
   },
 ];
@@ -80,15 +78,7 @@ function PricingCard({ plan, index }) {
         </div>
 
         <div className="mb-6">
-          <div className="flex items-baseline gap-1">
-            <span className="text-4xl sm:text-5xl font-extrabold text-slate-900">
-              {plan.price}
-            </span>
-            <span className="text-sm font-medium text-slate-500">
-              / {plan.period}
-            </span>
-          </div>
-          <p className="text-xs text-slate-400 mt-1">No monthly fees. Lifetime link.</p>
+          <p className="text-xs text-slate-400">No monthly fees. Lifetime link.</p>
         </div>
 
         <ul className="space-y-3 mb-8">
@@ -130,7 +120,7 @@ function PricingCard({ plan, index }) {
             : "text-slate-800 bg-slate-100 hover:bg-slate-200"
         }`}
       >
-        Choose {plan.name} ({plan.price}) →
+        Choose {plan.name} →
       </a>
     </div>
   );

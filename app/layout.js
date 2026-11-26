@@ -20,7 +20,7 @@ export const metadata = {
     template: "%s | InviteUs",
   },
   description:
-    "Create premium, interactive digital invitation websites for weddings, birthdays, housewarmings, inaugurations, and celebrations. Share on WhatsApp with Google Maps navigation, RSVP, audio music player, and countdown timer. Plans from ₹1,499.",
+    "Create premium, interactive digital invitation websites for weddings, birthdays, housewarmings, inaugurations, and celebrations. Share on WhatsApp with Google Maps navigation, RSVP, audio music player, and countdown timer.",
   keywords: [
     "digital invitation website kerala",
     "online invitation card kerala",
@@ -49,7 +49,7 @@ export const metadata = {
   openGraph: {
     title: "InviteUs – Kerala's Premier Digital Invitation Websites",
     description:
-      "Modern, interactive digital invitation websites for weddings, birthdays, housewarmings, and celebrations. Share via WhatsApp with Google Maps navigation, music, and photo gallery. From ₹1,499.",
+      "Modern, interactive digital invitation websites for weddings, birthdays, housewarmings, and celebrations. Share via WhatsApp with Google Maps navigation, music, and photo gallery.",
     url: "https://inviteus.in",
     siteName: "InviteUs",
     locale: "en_IN",
@@ -106,7 +106,6 @@ const jsonLd = {
       "@id": "https://inviteus.in/#service",
       "name": "InviteUs Digital Invitations",
       "image": "https://inviteus.in/logo.png",
-      "priceRange": "₹1499 - ₹1999",
       "telephone": "+91-75930-71195",
       "address": {
         "@type": "PostalAddress",

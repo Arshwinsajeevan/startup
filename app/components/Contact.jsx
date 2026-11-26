@@ -15,8 +15,8 @@ const eventTypes = [
 ];
 
 const planOptions = [
-  "Standard Plan (₹1,999) – Popular with Music & Gallery",
-  "Basic Plan (₹1,499) – Essential 1-Page Invite",
+  "Standard Plan – Popular with Music & Gallery",
+  "Basic Plan – Essential 1-Page Invite",
   "I need advice on which plan to choose",
 ];
 
@@ -30,7 +30,7 @@ export default function Contact() {
     name: "",
     phone: "",
     eventType: "",
-    selectedPlan: "Standard Plan (₹1,999) – Popular with Music & Gallery",
+    selectedPlan: "Standard Plan – Popular with Music & Gallery",
   });
 
   const handleSubmit = async (e) => {

@@ -2,9 +2,9 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "Pricing Plans – Transparent ₹1,499 & ₹1,999 Packages",
+  title: "Pricing Plans – Basic & Standard Packages",
   description:
-    "Simple, transparent pricing for digital wedding & event invitation websites in Kerala. Choose Basic at ₹1,499 or Standard at ₹1,999 with music, gallery, and RSVP.",
+    "Simple, transparent pricing for digital wedding & event invitation websites in Kerala. Choose Basic or Standard with music, gallery, and RSVP.",
   keywords: [
     "digital wedding invitation price kerala",
     "wedding website cost kerala",
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "Can we add background music to the website?",
-    a: "Yes! In the Standard Plan (₹1,999), you can choose any background music, instrumental melody, acoustic tune, or favorite song of your choice with an elegant play/pause button.",
+    a: "Yes! In the Standard Plan, you can choose any background music, instrumental melody, acoustic tune, or favorite song of your choice with an elegant play/pause button.",
   },
   {
     q: "How fast will my website be ready?",
@@ -86,15 +86,7 @@ export default function PricingPage() {
                 </div>
 
                 <div className="mb-8">
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-5xl font-extrabold text-slate-900">
-                      ₹1,499
-                    </span>
-                    <span className="text-slate-500 text-sm font-medium">
-                      / one-time
-                    </span>
-                  </div>
-                  <p className="text-xs text-slate-400 mt-1.5">
+                  <p className="text-xs text-slate-400">
                     No subscriptions. Lifetime link access.
                   </p>
                 </div>
@@ -146,12 +138,12 @@ export default function PricingPage() {
               </div>
 
               <a
-                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi InviteUs! I want to book the Basic Plan (₹1,499) for my event.")}`}
+                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi InviteUs! I want to book the Basic Plan for my event.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full block text-center py-3.5 px-6 rounded-xl font-semibold text-slate-800 bg-slate-100 hover:bg-slate-200 transition-colors"
               >
-                Choose Basic (₹1,499)
+                Choose Basic
               </a>
             </div>
 
@@ -178,15 +170,7 @@ export default function PricingPage() {
                   </div>
 
                   <div className="mb-8">
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-5xl font-extrabold text-slate-900">
-                        ₹1,999
-                      </span>
-                      <span className="text-slate-500 text-sm font-medium">
-                        / one-time
-                      </span>
-                    </div>
-                    <p className="text-xs text-peach-600 font-medium mt-1.5">
+                    <p className="text-xs text-peach-600 font-medium">
                       Everything in Basic, plus premium multimedia & RSVP.
                     </p>
                   </div>
@@ -238,12 +222,12 @@ export default function PricingPage() {
                 </div>
 
                 <a
-                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi InviteUs! I want to book the Standard Plan (₹1,999) with photo gallery & music.")}`}
+                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi InviteUs! I want to book the Standard Plan with photo gallery & music.")}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full block text-center py-4 px-6 rounded-xl font-bold text-white bg-gradient-to-r from-peach-500 to-rose-500 hover:from-peach-600 hover:to-rose-600 shadow-lg shadow-peach-200 transition-all duration-300 hover:scale-[1.02]"
                 >
-                  Book Standard Plan (₹1,999) →
+                  Book Standard Plan →
                 </a>
               </div>
             </div>
@@ -262,8 +246,8 @@ export default function PricingPage() {
                 <thead>
                   <tr className="border-b border-slate-200 text-slate-900 font-semibold">
                     <th className="py-3 px-4">Feature</th>
-                    <th className="py-3 px-4 text-center">Basic (₹1,499)</th>
-                    <th className="py-3 px-4 text-center text-peach-600">Standard (₹1,999)</th>
+                    <th className="py-3 px-4 text-center">Basic</th>
+                    <th className="py-3 px-4 text-center text-peach-600">Standard</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-200">
