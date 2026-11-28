@@ -2,14 +2,16 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "About Us – Bringing Kerala Celebrations to Life Digitally | InviteUs",
+  title: "About InviteUs – Digital Invitation Website Maker in India",
   description:
-    "Discover the story behind InviteUs. Founded in Kerala to help couples and families create beautiful, interactive, paper-free digital invitation websites.",
+    "Discover the story behind InviteUs. Founded in Kerala to help couples, families, and brands worldwide create interactive digital invitation websites, motion graphics, AI videos, posters, branding, and business websites.",
   keywords: [
     "about inviteus",
-    "kerala digital invitation company",
-    "digital wedding card maker kerala",
-    "wedding website startup kerala",
+    "digital invitation website maker",
+    "motion graphics and ai video studio",
+    "logo design and branding agency",
+    "function poster and invitation card design",
+    "business and portfolio website designer",
   ],
   alternates: {
     canonical: "/about",
@@ -89,6 +91,18 @@ export default function AboutPage() {
                 Paper cards fade and end up in the dustbin. But your InviteUs website stays alive long after the celebrations are over. You can revisit your proposal story, photos, and guest wishes on your 1st, 5th, or 10th anniversary, reliving the joy anytime, anywhere.
               </p>
             </div>
+
+            <div>
+              <h2
+                className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4"
+                style={{ fontFamily: "var(--font-playfair)" }}
+              >
+                Creative Studio: Video, Posters, Branding &amp; Websites
+              </h2>
+              <p>
+                Beyond digital invitations, our studio crafts <strong className="text-slate-800">motion graphics videos, AI promotional videos, Reels &amp; highlight video editing, professional photo retouching, function posters, and invitation cards</strong> for clients everywhere. We also handle complete <strong className="text-slate-800">branding from logo design to brand posters and video edits</strong>, along with clean portfolio, static, and business websites.
+              </p>
+            </div>
           </div>
 
           {/* Core Values */}
@@ -101,24 +115,36 @@ export default function AboutPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-slate-50 rounded-2xl p-7 border border-slate-200">
-                <div className="text-3xl mb-3">🌿</div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">Eco-Friendly & Sustainable</h3>
+                <div className="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center mb-4">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">Eco-Friendly &amp; Sustainable</h3>
                 <p className="text-sm text-slate-600">
                   Save thousands of sheets of paper, packaging, and fuel. Every digital invite sent is a step towards a greener celebration.
                 </p>
               </div>
               <div className="bg-slate-50 rounded-2xl p-7 border border-slate-200">
-                <div className="text-3xl mb-3">⚡</div>
+                <div className="w-11 h-11 rounded-xl bg-peach-50 text-peach-600 border border-peach-100 flex items-center justify-center mb-4">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">24–48 Hour Turnaround</h3>
                 <p className="text-sm text-slate-600">
-                  Weddings move fast. Once you share your details and photos, our team crafts and delivers your personalized site in 24 to 48 hours.
+                  Celebrations and launches move fast. Once you share your details and media, our team crafts and delivers your personalized project in 24 to 48 hours.
                 </p>
               </div>
               <div className="bg-slate-50 rounded-2xl p-7 border border-slate-200">
-                <div className="text-3xl mb-3">💎</div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">Affordable Luxury</h3>
+                <div className="w-11 h-11 rounded-xl bg-amber-50 text-amber-600 border border-amber-100 flex items-center justify-center mb-4">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">Tailored Craftsmanship</h3>
                 <p className="text-sm text-slate-600">
-                  Simple, transparent packages with no hidden fees. World-class design accessible to every family in Kerala and beyond.
+                  Simple, transparent packages with no hidden fees. Custom design accessible to families, creators, and businesses everywhere.
                 </p>
               </div>
             </div>

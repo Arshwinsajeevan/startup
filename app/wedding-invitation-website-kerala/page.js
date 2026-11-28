@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Link from "next/link";
 
 export const metadata = {
   title: "Digital Wedding & Event Invitation Websites in Kerala | InviteUs",
@@ -34,6 +35,7 @@ const eventTypes = [
     highlights: ["Auditorium Navigation", "Muhurtham & Reception Times", "Photo Story", "Custom Music", "RSVP"],
     iconBg: "bg-peach-50 text-peach-600 border-peach-100",
     cardBorder: "border-slate-200 hover:border-peach-300",
+    detailHref: "/engagement-invitation-website",
     whatsappTopic: "Wedding & Engagement Website",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -48,6 +50,7 @@ const eventTypes = [
     highlights: ["Exact House GPS Pin", "Pooja Timings", "Lunch / Dinner Schedule", "Parking Directions"],
     iconBg: "bg-amber-50 text-amber-700 border-amber-100",
     cardBorder: "border-slate-200 hover:border-amber-300",
+    detailHref: "/housewarming-invitation-website",
     whatsappTopic: "Housewarming Invitation Website",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -62,6 +65,7 @@ const eventTypes = [
     highlights: ["Ribbon-Cutting Time", "Showroom Navigation", "Interior Photos", "Brochure Download"],
     iconBg: "bg-emerald-50 text-emerald-700 border-emerald-100",
     cardBorder: "border-slate-200 hover:border-emerald-300",
+    detailHref: "/inauguration-invitation-website",
     whatsappTopic: "Store & Office Opening Website",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -76,6 +80,7 @@ const eventTypes = [
     highlights: ["Venue Directions", "Cake-Cutting Time", "Celebration Music", "Memory Album"],
     iconBg: "bg-rose-50 text-rose-700 border-rose-100",
     cardBorder: "border-slate-200 hover:border-rose-300",
+    detailHref: "/birthday-invitation-website",
     whatsappTopic: "Birthday Party Website",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -90,6 +95,7 @@ const eventTypes = [
     highlights: ["Banquet Hall Route", "Dinner Reception Time", "Story Timeline", "Guest Wishes"],
     iconBg: "bg-purple-50 text-purple-700 border-purple-100",
     cardBorder: "border-slate-200 hover:border-purple-300",
+    detailHref: "/anniversary-invitation-website",
     whatsappTopic: "Anniversary Celebration Website",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -104,6 +110,7 @@ const eventTypes = [
     highlights: ["Ceremony Timings", "Venue Directions", "Acoustic Melody", "Guest Count RSVP"],
     iconBg: "bg-sky-50 text-sky-700 border-sky-100",
     cardBorder: "border-slate-200 hover:border-sky-300",
+    detailHref: "/naming-ceremony-invitation",
     whatsappTopic: "Baby Shower / Naming Ceremony Website",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -244,14 +251,24 @@ export default function WeddingsAndEventsPage() {
                     </div>
                   </div>
 
-                  <a
-                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi InviteUs! I'm planning a ${evt.whatsappTopic} and would like to see design options.`)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full text-center px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 bg-slate-50 hover:bg-peach-50 hover:text-peach-600 border border-slate-200 hover:border-peach-200 transition-colors"
-                  >
-                    Ask About This on WhatsApp →
-                  </a>
+                  <div className="space-y-2">
+                    {evt.detailHref && (
+                      <Link
+                        href={evt.detailHref}
+                        className="block w-full text-center px-4 py-2.5 rounded-xl text-sm font-semibold text-peach-600 bg-peach-50/70 hover:bg-peach-100/70 border border-peach-200 transition-colors"
+                      >
+                        View Page Details →
+                      </Link>
+                    )}
+                    <a
+                      href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi InviteUs! I'm planning a ${evt.whatsappTopic} and would like to see design options.`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full text-center px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 bg-slate-50 hover:bg-peach-50 hover:text-peach-600 border border-slate-200 hover:border-peach-200 transition-colors"
+                    >
+                      Ask About This on WhatsApp →
+                    </a>
+                  </div>
                 </div>
               ))}
             </div>
@@ -288,6 +305,126 @@ export default function WeddingsAndEventsPage() {
                   </p>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* All Occasions Directory */}
+          <div className="mb-24">
+            <div className="text-center mb-12">
+              <h2
+                className="text-3xl sm:text-4xl font-bold text-slate-900"
+                style={{ fontFamily: "var(--font-playfair)" }}
+              >
+                All Occasions We Design For
+              </h2>
+              <p className="text-slate-500 mt-2 max-w-xl mx-auto text-sm sm:text-base">
+                Beyond weddings and birthdays, we craft custom digital invitation websites for traditional, family, and business milestones across India.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              <div className="bg-slate-50/70 rounded-2xl p-6 border border-slate-200">
+                <h3 className="text-base font-bold text-slate-900 mb-3">
+                  Traditional & Coming-of-Age
+                </h3>
+                <ul className="space-y-2 text-sm text-slate-600 mb-4">
+                  <li>
+                    <Link href="/half-saree-ceremony-invitation" className="text-peach-600 font-semibold hover:underline">
+                      Half Saree Ceremony (Langa Voni / Davani) →
+                    </Link>
+                  </li>
+                  <li>Dhoti Ceremony (Pancha Kattu)</li>
+                  <li>Upanayanam / Sacred Thread Ceremony</li>
+                  <li>Puberty Function (Manjal Neerattu Vizha)</li>
+                  <li>Arangetram (Dance & Music Debut)</li>
+                </ul>
+              </div>
+
+              <div className="bg-slate-50/70 rounded-2xl p-6 border border-slate-200">
+                <h3 className="text-base font-bold text-slate-900 mb-3">
+                  Wedding & Pre-Wedding Events
+                </h3>
+                <ul className="space-y-2 text-sm text-slate-600 mb-4">
+                  <li>
+                    <Link href="/engagement-invitation-website" className="text-peach-600 font-semibold hover:underline">
+                      Engagement & Save the Date →
+                    </Link>
+                  </li>
+                  <li>Ring Ceremony (Nishchayam / Madhuramveppu)</li>
+                  <li>Haldi, Mehendi & Sangeet Parties</li>
+                  <li>Bridal Shower & Bachelorette</li>
+                  <li>Wedding Reception Only Invites</li>
+                </ul>
+              </div>
+
+              <div className="bg-slate-50/70 rounded-2xl p-6 border border-slate-200">
+                <h3 className="text-base font-bold text-slate-900 mb-3">
+                  Baby, Naming & Faith Milestones
+                </h3>
+                <ul className="space-y-2 text-sm text-slate-600 mb-4">
+                  <li>
+                    <Link href="/naming-ceremony-invitation" className="text-peach-600 font-semibold hover:underline">
+                      Naming Ceremony, Choroonu & Baptism →
+                    </Link>
+                  </li>
+                  <li>Baby Shower (Valakkappu / Godh Bharai)</li>
+                  <li>Noolukettu & Namakarana</li>
+                  <li>First Holy Communion & Confirmation</li>
+                  <li>Mundan (First Haircut Ceremony)</li>
+                </ul>
+              </div>
+
+              <div className="bg-slate-50/70 rounded-2xl p-6 border border-slate-200">
+                <h3 className="text-base font-bold text-slate-900 mb-3">
+                  Birthdays & Elder Milestones
+                </h3>
+                <ul className="space-y-2 text-sm text-slate-600 mb-4">
+                  <li>
+                    <Link href="/birthday-invitation-website" className="text-peach-600 font-semibold hover:underline">
+                      1st Birthday & Kids Theme Parties →
+                    </Link>
+                  </li>
+                  <li>Sweet 16, 18th, 21st & 50th Birthdays</li>
+                  <li>Shashtipoorthi (60th Birthday)</li>
+                  <li>Saptathi (70th) & Sathabhishekam (80th)</li>
+                </ul>
+              </div>
+
+              <div className="bg-slate-50/70 rounded-2xl p-6 border border-slate-200">
+                <h3 className="text-base font-bold text-slate-900 mb-3">
+                  Home & Family Celebrations
+                </h3>
+                <ul className="space-y-2 text-sm text-slate-600 mb-4">
+                  <li>
+                    <Link href="/housewarming-invitation-website" className="text-peach-600 font-semibold hover:underline">
+                      Housewarming (Grihapravesham / Kudiveppu) →
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/anniversary-invitation-website" className="text-peach-600 font-semibold hover:underline">
+                      Silver & Golden Wedding Anniversaries →
+                    </Link>
+                  </li>
+                  <li>Bhoomi Pooja & Foundation Stone Laying</li>
+                  <li>Family Reunion (Kudumbasangamam)</li>
+                </ul>
+              </div>
+
+              <div className="bg-slate-50/70 rounded-2xl p-6 border border-slate-200">
+                <h3 className="text-base font-bold text-slate-900 mb-3">
+                  Business & Community Events
+                </h3>
+                <ul className="space-y-2 text-sm text-slate-600 mb-4">
+                  <li>
+                    <Link href="/inauguration-invitation-website" className="text-peach-600 font-semibold hover:underline">
+                      Shop, Showroom & Office Inaugurations →
+                    </Link>
+                  </li>
+                  <li>Product Launch & Store Anniversaries</li>
+                  <li>Corporate Annual Day & Award Nights</li>
+                  <li>School / College Alumni & Graduation</li>
+                </ul>
+              </div>
             </div>
           </div>
 

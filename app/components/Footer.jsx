@@ -6,10 +6,21 @@ import Image from "next/image";
 const footerLinks = [
   { label: "Home", href: "/" },
   { label: "Weddings & Events", href: "/wedding-invitation-website-kerala" },
+  { label: "Creative & Branding", href: "/creative-studio" },
   { label: "Showcase", href: "/#showcase" },
   { label: "Pricing", href: "/pricing" },
   { label: "About Us", href: "/about" },
   { label: "Contact & Book", href: "/contact" },
+];
+
+const eventLinks = [
+  { label: "Wedding Invitation Websites", href: "/wedding-invitation-website-kerala" },
+  { label: "Engagement & Save the Date", href: "/engagement-invitation-website" },
+  { label: "Housewarming Invitations", href: "/housewarming-invitation-website" },
+  { label: "Birthday Invitations", href: "/birthday-invitation-website" },
+  { label: "Naming & Baptism Invites", href: "/naming-ceremony-invitation" },
+  { label: "Anniversary Invitations", href: "/anniversary-invitation-website" },
+  { label: "Inauguration Invitations", href: "/inauguration-invitation-website" },
 ];
 
 export default function Footer() {
@@ -18,7 +29,7 @@ export default function Footer() {
   return (
     <footer className="bg-slate-900 text-white pt-16 pb-12 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 mb-12">
           {/* Brand Info */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
@@ -31,9 +42,9 @@ export default function Footer() {
               />
             </div>
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm mb-6">
-              InviteUs creates premium, interactive digital invitation websites for
-              weddings, birthdays, housewarmings, and inaugurations. Share with 1-tap Google Maps
-              venue navigation, music, and photo gallery.
+              InviteUs creates custom digital invitation websites for weddings and
+              events, alongside motion graphics, AI videos, video and photo editing,
+              function posters, logo design, branding, and business websites.
             </p>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800 text-xs text-peach-300 font-medium">
               <span>Made with ❤️ in Kerala, India</span>
@@ -48,6 +59,25 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {footerLinks.map((link) => (
                 <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-slate-400 hover:text-peach-400 transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Event Invitations */}
+          <div>
+            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">
+              Invitations
+            </h4>
+            <ul className="space-y-2.5">
+              {eventLinks.map((link) => (
+                <li key={link.href}>
                   <Link
                     href={link.href}
                     className="text-sm text-slate-400 hover:text-peach-400 transition-colors"

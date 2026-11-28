@@ -19,7 +19,7 @@ export default function Hero() {
         >
           <span className="w-2 h-2 rounded-full bg-peach-500 animate-pulse" />
           <span className="text-xs sm:text-sm font-semibold text-peach-700">
-            Kerala&apos;s Premier Digital Invitation Websites
+            India&apos;s Custom Digital Invitation Websites
           </span>
         </motion.div>
 
@@ -34,7 +34,7 @@ export default function Hero() {
           Replace Paper Cards With a
           <br />
           <span className="bg-gradient-to-r from-peach-500 via-rose-500 to-gold-500 bg-clip-text text-transparent">
-            Stunning Invitation Website
+            Digital Invitation Website
           </span>
         </motion.h1>
 
@@ -45,9 +45,9 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-6 text-base sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed"
         >
-          Give your guests an unforgettable digital experience for your wedding,
-          birthday, housewarming, or inauguration. Share a single link with 1-tap
-          Google Maps venue navigation, program schedule, and photo gallery.
+          Create a custom online invitation for your wedding, birthday,
+          housewarming, or inauguration. Share one WhatsApp link with 1-tap
+          Google Maps venue navigation, program schedule, music, and photo gallery.
         </motion.p>
 
         {/* CTA Button */}

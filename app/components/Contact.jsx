@@ -11,12 +11,18 @@ const eventTypes = [
   "Birthday Party (1st & Milestones)",
   "Wedding Anniversary",
   "Baby Shower / Naming Ceremony",
-  "Other Celebration",
+  "Motion Graphics / AI Video / Video Editing",
+  "Function Posters / Cards / Photo Editing",
+  "Logo Design & Complete Branding",
+  "Portfolio / Static / Business Website",
+  "Other Celebration or Project",
 ];
 
 const planOptions = [
   "Standard Plan – Popular with Music & Gallery",
   "Basic Plan – Essential 1-Page Invite",
+  "Creative Studio (Video, Posters, Cards & Branding)",
+  "Portfolio, Static or Business Website",
   "I need advice on which plan to choose",
 ];
 
@@ -98,11 +104,11 @@ export default function Contact() {
               Ready to Create Your
               <br />
               <span className="bg-gradient-to-r from-peach-500 to-rose-500 bg-clip-text text-transparent">
-                Event Website?
+                Event Invitation?
               </span>
             </h2>
             <p className="mt-4 text-slate-600 max-w-lg mx-auto">
-              Share your details and choose your package. We will get your website ready within 24 to 48 hours.
+              Whether it is a digital invitation, motion graphics video, AI video, poster, branding, or a portfolio/business website — share your details below.
             </p>
           </motion.div>
 

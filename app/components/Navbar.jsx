@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Weddings & Events", href: "/wedding-invitation-website-kerala" },
+  { label: "Creative & Branding", href: "/creative-studio" },
   { label: "Features", href: "/#features" },
   { label: "Showcase", href: "/#showcase" },
   { label: "Pricing", href: "/pricing" },

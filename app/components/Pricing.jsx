@@ -182,6 +182,24 @@ export default function Pricing() {
           ))}
         </div>
 
+        {/* Creative & Web Add-on Banner */}
+        <div className="max-w-4xl mx-auto mt-10 mb-8 bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <h3 className="text-base font-bold text-slate-900">
+              Need Motion Graphics, AI Videos, Posters, Branding or a Business Website?
+            </h3>
+            <p className="text-sm text-slate-600 mt-1">
+              We also offer custom packages for videos, photo editing, logo-to-poster branding, and portfolio or business websites.
+            </p>
+          </div>
+          <Link
+            href="/pricing#creative-packages"
+            className="shrink-0 px-5 py-2.5 rounded-xl text-sm font-semibold text-peach-600 bg-peach-50 hover:bg-peach-100 border border-peach-200 transition-colors"
+          >
+            View Creative Packages →
+          </Link>
+        </div>
+
         {/* Link to full comparison */}
         <div className="text-center">
           <Link

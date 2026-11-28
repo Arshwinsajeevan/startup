@@ -2,14 +2,17 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "Pricing Plans – Basic & Standard Packages",
+  title: "Digital Invitation Website Packages – Basic & Standard",
   description:
-    "Simple, transparent pricing for digital wedding & event invitation websites in Kerala. Choose Basic or Standard with music, gallery, and RSVP.",
+    "Simple, one-time packages for custom digital wedding, birthday, housewarming, and event invitation websites in India. Includes Google Maps, background music, photo gallery, and RSVP.",
   keywords: [
-    "digital wedding invitation price kerala",
-    "wedding website cost kerala",
-    "online invitation pricing india",
-    "kerala digital card packages",
+    "digital invitation website packages",
+    "digital wedding invitation website",
+    "motion graphics video pricing",
+    "ai video creation packages",
+    "logo design and branding packages",
+    "poster and invitation card design",
+    "business website design packages",
   ],
   alternates: {
     canonical: "/pricing",
@@ -41,9 +44,25 @@ const faqs = [
 
 export default function PricingPage() {
   const whatsappNumber = "917593071195";
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <Navbar />
       <main className="pt-28 pb-20 sm:pt-36 sm:pb-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -233,6 +252,27 @@ export default function PricingPage() {
             </div>
           </div>
 
+          {/* 3rd Small Card: Creative Studio & Websites */}
+          <div className="max-w-4xl mx-auto -mt-12 mb-16 bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+              <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-peach-50 text-peach-600 border border-peach-200 mb-2">
+                Creative Studio &amp; Web Design
+              </span>
+              <h3 className="text-base sm:text-lg font-bold text-slate-900">
+                Also Offering Motion Graphics, AI Videos, Posters, Branding &amp; Websites
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 mt-1">
+                Custom packages for video &amp; photo editing, function posters, invitation cards, logo-to-poster branding, plus portfolio, static, and business websites.
+              </p>
+            </div>
+            <a
+              href="#creative-packages"
+              className="shrink-0 px-5 py-2.5 rounded-xl text-sm font-semibold text-peach-600 bg-peach-50 hover:bg-peach-100 border border-peach-200 transition-colors"
+            >
+              See Creative Packages ↓
+            </a>
+          </div>
+
           {/* Feature Comparison Table */}
           <div className="max-w-4xl mx-auto bg-slate-50 rounded-3xl p-6 sm:p-10 border border-slate-200 mb-20">
             <h3
@@ -298,6 +338,121 @@ export default function PricingPage() {
                   </tr>
                 </tbody>
               </table>
+            </div>
+          </div>
+
+          {/* Creative, Video, Branding & Web Packages */}
+          <div id="creative-packages" className="scroll-mt-24 max-w-4xl mx-auto mb-20">
+            <div className="text-center mb-10">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-peach-50 text-peach-600 text-xs font-semibold mb-3 border border-peach-200">
+                Creative Studio &amp; Branding Packages
+              </span>
+              <h2
+                className="text-2xl sm:text-3xl font-bold text-slate-900"
+                style={{ fontFamily: "var(--font-playfair)" }}
+              >
+                Video, Posters, Branding &amp; Custom Websites
+              </h2>
+              <p className="text-sm sm:text-base text-slate-600 mt-2 max-w-xl mx-auto">
+                Custom quotes tailored to your scope, delivered for clients anywhere in the world.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+              <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs flex flex-col justify-between">
+                <div>
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">
+                    Motion Graphics &amp; AI Videos
+                  </h3>
+                  <p className="text-xs text-slate-500 mb-4">
+                    Custom Quote • Worldwide Delivery
+                  </p>
+                  <ul className="space-y-2 text-sm text-slate-600 mb-6">
+                    <li>• Animated invitation videos</li>
+                    <li>• AI promotional &amp; ad videos</li>
+                    <li>• Reels, Shorts &amp; highlight video editing</li>
+                    <li>• Logo reveals &amp; title animations</li>
+                  </ul>
+                </div>
+                <a
+                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi InviteUs! I'd like a quote for Motion Graphics / AI Video / Video Editing.")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-slate-800 bg-slate-100 hover:bg-peach-50 hover:text-peach-600 transition-colors"
+                >
+                  Get Custom Quote →
+                </a>
+              </div>
+
+              <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs flex flex-col justify-between">
+                <div>
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">
+                    Posters, Cards &amp; Photo Editing
+                  </h3>
+                  <p className="text-xs text-slate-500 mb-4">
+                    Custom Quote • Fast Turnaround
+                  </p>
+                  <ul className="space-y-2 text-sm text-slate-600 mb-6">
+                    <li>• All function posters &amp; flyers</li>
+                    <li>• Digital invitation &amp; Save the Date cards</li>
+                    <li>• Professional photo retouching</li>
+                    <li>• Color grading &amp; album prep</li>
+                  </ul>
+                </div>
+                <a
+                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi InviteUs! I'd like a quote for Function Posters / Invitation Cards / Photo Editing.")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-slate-800 bg-slate-100 hover:bg-peach-50 hover:text-peach-600 transition-colors"
+                >
+                  Get Custom Quote →
+                </a>
+              </div>
+
+              <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs flex flex-col justify-between">
+                <div>
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">
+                    Complete Branding Package
+                  </h3>
+                  <p className="text-xs text-slate-500 mb-4">
+                    Custom Quote • Full Brand Kit
+                  </p>
+                  <ul className="space-y-2 text-sm text-slate-600 mb-6">
+                    <li>• Custom logo design &amp; identity</li>
+                    <li>• Brand posters &amp; social creatives</li>
+                    <li>• Commercial brand video edits</li>
+                    <li>• Launch &amp; campaign assets</li>
+                  </ul>
+                </div>
+                <a
+                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi InviteUs! I'd like a quote for Logo Design & Complete Branding.")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center py-2.5 px-4 rounded-xl text-sm font-semibold text-slate-800 bg-slate-100 hover:bg-peach-50 hover:text-peach-600 transition-colors"
+                >
+                  Get Custom Quote →
+                </a>
+              </div>
+            </div>
+
+            {/* Secondary Web Packages */}
+            <div className="bg-slate-50 rounded-2xl p-5 sm:p-6 border border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div>
+                <h3 className="text-base font-bold text-slate-900">
+                  Portfolio, Static &amp; Business Websites
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 mt-1">
+                  Also available on custom quote for personal portfolios, static sites, and small business websites.
+                </p>
+              </div>
+              <a
+                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi InviteUs! I'd like a quote for a Portfolio, Static, or Business Website.")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-700 bg-white border border-slate-200 hover:border-peach-300 hover:text-peach-600 transition-colors"
+              >
+                Request Web Quote →
+              </a>
             </div>
           </div>
 

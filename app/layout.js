@@ -16,24 +16,30 @@ const playfair = Playfair_Display({
 export const metadata = {
   metadataBase: new URL("https://inviteus.in"),
   title: {
-    default: "InviteUs – Digital Invitation Websites for Weddings, Birthdays & Events in Kerala",
+    default: "InviteUs – Digital Invitation Websites for Weddings & Events in India",
     template: "%s | InviteUs",
   },
   description:
-    "Create premium, interactive digital invitation websites for weddings, birthdays, housewarmings, inaugurations, and celebrations. Share on WhatsApp with Google Maps navigation, RSVP, audio music player, and countdown timer.",
+    "Create custom, interactive digital invitation websites for weddings, birthdays, housewarmings, and inaugurations in India. Share via WhatsApp with 1-tap Google Maps navigation, RSVP, background music, and photo gallery.",
   keywords: [
-    "digital invitation website kerala",
-    "online invitation card kerala",
-    "digital wedding invitation website kerala",
-    "housewarming digital invitation kerala",
-    "inauguration invitation website",
-    "birthday invitation website india",
+    "digital invitation website",
+    "online invitation card india",
     "whatsapp invitation website",
-    "kerala event website maker",
-    "save the date website kerala",
+    "digital wedding invitation website",
+    "digital invitation maker india",
+    "housewarming digital invitation",
+    "birthday invitation website india",
+    "inauguration invitation website",
+    "online wedding card kerala",
+    "save the date website",
     "interactive event invitation website",
+    "motion graphics video maker",
+    "ai video production",
+    "video and photo editing service",
+    "function poster design",
+    "logo design and branding",
+    "business and portfolio website design",
     "InviteUs",
-    "inviteus kerala",
   ],
   authors: [{ name: "InviteUs", url: "https://inviteus.in" }],
   creator: "InviteUs",
@@ -47,19 +53,28 @@ export const metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "InviteUs – Kerala's Premier Digital Invitation Websites",
+    title: "InviteUs – Digital Invitation Websites for All Celebrations",
     description:
-      "Modern, interactive digital invitation websites for weddings, birthdays, housewarmings, and celebrations. Share via WhatsApp with Google Maps navigation, music, and photo gallery.",
+      "Modern, interactive digital invitation websites for weddings, birthdays, housewarmings, and inaugurations in India. Share via WhatsApp with Google Maps navigation, music, and photo gallery.",
     url: "https://inviteus.in",
     siteName: "InviteUs",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 800,
+        height: 600,
+        alt: "InviteUs Digital Invitation Websites",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "InviteUs – Digital Invitation Websites for All Celebrations",
     description:
-      "Ditch paper cards! Send stunning interactive invitation websites on WhatsApp with Google Maps & RSVP.",
+      "Replace paper cards with an interactive digital invitation website on WhatsApp with Google Maps & RSVP.",
+    images: ["/logo.png"],
   },
   robots: {
     index: true,
@@ -131,6 +146,36 @@ const jsonLd = {
         "opens": "09:00",
         "closes": "21:00"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://inviteus.in/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a digital invitation website by InviteUs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "InviteUs creates custom, interactive web pages for weddings, housewarmings, birthdays, and inaugurations that you can share via a single WhatsApp link with 1-tap Google Maps navigation, event schedules, photo galleries, and background music."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast can InviteUs deliver my invitation website?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Once you share your event details and photos, your custom invitation website is designed and delivered ready to share on WhatsApp within 24 to 48 hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can guests open Google Maps directions directly from the invitation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every InviteUs website includes a 1-tap Google Maps button that launches turn-by-turn navigation straight to your auditorium, home, resort, or showroom."
+          }
+        }
+      ]
     }
   ]
 };

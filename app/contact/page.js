@@ -3,14 +3,15 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "Contact & Book Your Event Website | InviteUs Kerala",
+  title: "Book Your Digital Invitation Website | Contact InviteUs",
   description:
-    "Contact InviteUs to create your digital wedding or event invitation website. Fast 24-48hr delivery in Kerala. Call or message us on WhatsApp.",
+    "Contact InviteUs to create your digital wedding, birthday, housewarming, or inauguration invitation — plus motion graphics, AI videos, posters, branding, and business websites.",
   keywords: [
     "contact inviteus",
-    "book wedding website kerala",
-    "digital invitation contact kerala",
-    "whatsapp inviteus kerala",
+    "book digital invitation website",
+    "motion graphics and ai video inquiry",
+    "logo design and branding contact",
+    "business website designer contact",
   ],
   alternates: {
     canonical: "/contact",
@@ -33,7 +34,7 @@ export default function ContactPage() {
             Get In Touch With InviteUs
           </h1>
           <p className="mt-3 text-slate-600 max-w-xl mx-auto">
-            Ready to build your digital wedding or celebration website? Message us directly on WhatsApp or fill out the form below.
+            Ready to build your digital invitation, motion graphics video, AI promo, posters, branding, or business website? Message us directly on WhatsApp or fill out the form below.
           </p>
         </div>
 

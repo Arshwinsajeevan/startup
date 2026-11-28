@@ -4,6 +4,7 @@ import HowItWorks from "./components/HowItWorks";
 import Features from "./components/Features";
 import Showcase from "./components/Showcase";
 import WhyChooseUs from "./components/WhyChooseUs";
+import CreativeServices from "./components/CreativeServices";
 import Pricing from "./components/Pricing";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -19,6 +20,7 @@ export default function Home() {
         <Features />
         <Showcase />
         <WhyChooseUs />
+        <CreativeServices />
         <Pricing />
         <About />
         <Contact />
